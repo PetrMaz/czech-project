@@ -1,3 +1,45 @@
+html {
+     font-size: 62.5%;
+     box-sizing: border-box;
+}
+
 body {
-     color: red;
+     font-size: 1.6rem;
+     padding: 0;
+     font-family: 'Ubuntu', sans-serif;
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+     
+}
+
+header.header-news {
+     min-height: 18rem;
+     display: flex;
+}
+
+header.header-news > div {
+     flex: 1 0 0;
+     
+}
+
+section.main-content {
+display: flex;
+flex-wrap: wrap; /* zalomeni radku */
+gap: 1rem; /* rozestupy mezi elementy */
+padding-left: 1rem; /* zarovnani zleva */
+}
+.main-content__day {
+aspect-ratio: 1/1; /* zachovani pomeru stran velikosti dnu (stverce) */
+width: calc(100% / 7 - 2rem); /* velikosti dnu+zarovnani zprava */
+display: flex; /* k zarovnani obsahu na stred */
+align-items: center;
+justify-content: center;
+border: 1px solid rgba(0, 0, 0, .3); // okraj */
+border-radius: .5rem; /* zaobleni rohu */
+cursor: pointer; /* kurzor */
+transition: .5s; /* casovy udaj pro animovani prechodu zmen css */
+}
+.main-content__day:hover {
+background-color: rgba(0, 0, 0, .15); /* zmena pozadi pri hoveru */
 }
